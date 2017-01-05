@@ -31,10 +31,10 @@
       <li class="active"><a style="color:#F5F5DC" href="#">HOME</a></li>
       <c:forEach items="${categoryList}" var="category">
       <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href=${category.name}>${name}<span class="caret"></span> </a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href=${category.name}>${category.name}<span class="caret"></span> </a>
       <ul class="dropdown-menu">
       <c:forEach items="${category.products}" var="product">
-      <li><a style="color:#000000" href="<c:url value='product/get/${product.p_id}'/>"> ${product.name} </a>
+      <li><a style="color:#000000" href="<c:url value='product/get/${product.id}'/>"> ${product.name} </a>
     
      </c:forEach>
        <li><a style="color:#F5F5DC" href="#"></a></li>

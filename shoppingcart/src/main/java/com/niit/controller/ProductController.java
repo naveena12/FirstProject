@@ -186,6 +186,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.shoppingcart.model.Category;
 import com.niit.shoppingcart.model.Product;
@@ -246,6 +247,7 @@ public class ProductController
 			MultipartFile file=product.getImage();
 			String rootDirectory=request.getSession().getServletContext().getRealPath("/");
 			path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getId()+".jpg");
+			System.out.println("path value "+path);
 			if(file!=null && !file.isEmpty())
 			{
 				try{
@@ -303,6 +305,26 @@ public class ProductController
 				return "product";
 			
 		}
+			
+			@RequestMapping(value="productget-{id}")
+			public String getSelectedProduct(@PathVariable("id") String id,Model model,RedirectAttributes redirectAttributes)
+			{
+				System.out.println("Opening selected product details----"+id);
+				model.addAttribute("selectedProduct",this.productDAO.getProduct(id));
+				System.out.println("SelectedProduct ID is "+productDAO.getProduct(id));
+				return "selectedproduct";		
+			}
+
+			@RequestMapping(value="/backToHome",method=RequestMethod.GET)
+			public String backToHome(@ModelAttribute("selectedProduct")
+			final Product selectedProduct,final Model model)
+			{
+				model.addAttribute("selectedProduct",selectedProduct);
+				model.addAttribute("categoryList",this.categoryDAO.list());
+				return "index";
+				
+				
+			}
 			
 		
 	

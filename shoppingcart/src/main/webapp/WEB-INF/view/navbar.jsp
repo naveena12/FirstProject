@@ -22,26 +22,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index">SHOPPING WORLD</a>
+      <a class="navbar-brand" href="home">SHOPPING WORLD</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     
 
 <ul class="nav navbar-nav">
-      <li class="active"><a style="color:#F5F5DC" href="#">HOME</a></li>
-      <c:forEach items="${categoryList}" var="category">
+      <li class="active"><a style="color:#F5F5DC" href="home">HOME</a></li>
+       <c:forEach items="${categoryList}" var="category">
       <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href=${category.name}>${name}<span class="caret"></span> </a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href=${category.name}>${category.name}<span class="caret"></span> </a>
       <ul class="dropdown-menu">
       <c:forEach items="${category.products}" var="product">
-      <li><a style="color:#000000" href="<c:url value='product/get/${product.p_id}'/>"> ${product.name} </a>
-    
+      <li><a style="color:#000000" href="productget-${product.id}"> ${product.name} </a>
+      <%-- <li><a style="color:#000000" href="product/get/${product.id}"> ${product.name} </a> --%>
+    </li>
+    </c:forEach>
+    </ul>
+    </li>
      </c:forEach>
-       <li><a style="color:#F5F5DC" href="#"></a></li>
-     </ul>
-      </li>       
-      </c:forEach>
-      
+    </ul>
+    
       <li><a style="color:#F5F5DC" href="aboutUs">CONTACT US</a></li> 
     </ul>
 <form class="navbar-form navbar-left">

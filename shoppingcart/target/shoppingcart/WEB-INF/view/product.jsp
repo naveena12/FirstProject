@@ -281,7 +281,7 @@ font-family: "Times New Roman", Times, serif;
 		<td><form:label style="color:#000000" path="id"><spring:message text="ID"/></form:label></td>
 		
 		<c:choose>
-			<c:when test="${!empty product.id }">
+			<c:when test="${!empty product.id}">
 				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="id" disabled="true" readonly="true"/></td>
 			</c:when>
 			<c:otherwise>

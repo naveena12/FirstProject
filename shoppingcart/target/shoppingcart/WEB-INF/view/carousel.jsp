@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,7 +37,7 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\watch1.jpg" alt="watches" width="460" height="345">
+        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\image6.jpg" alt="watches" width="460" height="345">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -44,15 +45,15 @@
       </div>
 
       <div class="item">
-        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\Watches_Top.jpg" alt="latest watches" width="460" height="345">
+        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\image7.jpg" alt="latest watches" width="460" height="345">
         <div class="carousel-caption">
-          <h3></h3>
+          <h3></h3>       
           <p></p>
         </div>
       </div>
     
       <div class="item">
-        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\watches2.jpg" alt="brandwatches" width="460" height="345">
+        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\images (2).jpg" alt="brandwatches" width="460" height="345">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -60,9 +61,9 @@
       </div>
 
       <div class="item">
-        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\images (6).jpg" alt="branded mobile" width="460" height="345">
+        <img src="D:\WT\shoppingcart\src\main\webapp\WEB-INF\resources\images\images (3).jpg" alt="branded mobile" width="460" height="345">
         <div class="carousel-caption">
-        <h3>Mobiles</h3>
+        <h3></h3>
           <p></p>
         </div>
       </div>

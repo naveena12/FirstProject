@@ -12,6 +12,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUtil {
       public static void upload(Path path,MultipartFile file,String fileName){
     	  if(!file.isEmpty()){
+    		  System.out.println("image name is "+fileName);
+    		  System.out.println("image path is "+path);
     		  InputStream inputStream=null;
     		  OutputStream outputStream=null;
     		  if(file.getSize()>0){

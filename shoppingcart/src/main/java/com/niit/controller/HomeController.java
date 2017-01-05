@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.shoppingcart.model.User;
+import com.niit.shoppingcartDAO.CategoryDAO;
 import com.niit.shoppingcartDAO.UserDAO;
 @Controller
 public class HomeController {
@@ -22,10 +23,14 @@ public class HomeController {
 	@Autowired
 	User user;
 	
+	@Autowired
+	CategoryDAO categoryDAO;
+	
 	@RequestMapping("/")
-	public String gotohome()
+	public String gotohome(Model model)
 	{
 		System.out.println("Loading Landing Page.....");
+		model.addAttribute("categoryList",this.categoryDAO.list());
 		return "index";
 	}
 	@RequestMapping("/cart")
@@ -108,10 +113,11 @@ public String registerUser(Model model, @ModelAttribute("user") User user)
 	model.addAttribute("userClickedregister",true);
 	return "/";
 }*/
-/*@RequestMapping("/index")
-public String index(Model model)
+@RequestMapping(value="/home")
+public String ind(Model model)
 {
-	model.addAttribute("userClickedregisterhere",true);
+	System.out.println("Loading Landing Page.....");
+	model.addAttribute("categoryList",this.categoryDAO.list());
 	return "index";
-}*/
+}
 }	

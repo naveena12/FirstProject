@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name="Category")
 @Component
-
 public class Category {
 	//id,name,description
 	//These property names better to take same name as fields names

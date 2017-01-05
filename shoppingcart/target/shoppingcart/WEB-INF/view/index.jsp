@@ -28,7 +28,10 @@
 </center> 
 <jsp:include page="carousel.jsp"></jsp:include>  
 
-  
+  <div class="row">
+ 
+  <img>
+  </div>
     
 </body>
 

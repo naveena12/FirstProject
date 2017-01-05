@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <a href="user"><span class="glyphicon glyphicon-user"></span> user</a>
+ 
          <a href="supplier"><span class="glyphicon glyphicon-supplier"></span> supplier</a>
          <a href="product"><span class="glyphicon glyphicon-product"></span> product</a>
         <a href="category"><span class="glyphicon glyphicon-category"></span> category</a>

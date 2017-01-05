@@ -17,7 +17,7 @@
 <!-- </form> -->
 
 
-<form  action="<c:url value='j_spring_security_check'/>"  method="POST" role="form">
+<form  action="<c:url value="j_spring_security_check"/>"  method="post" role="form">
        <c:if test="${not empty loginerror}">
        <p class="loginerror" >${loginerror}</p>
        </c:if>
@@ -30,7 +30,7 @@
         <div class="row">
 				<div class="col-sm-12 ">
 					<div class="form-group">
-						<input style="background-color:#FFFFE0" type="text"  name="username" id="name" class="form-control input-lg" placeholder="Name" tabindex="1" />
+						<input style="background-color:#FFFFE0" type="text"  name="username" class="form-control input-lg" placeholder="Name" tabindex="1" />
 					</div>
 				</div>
 			
@@ -39,7 +39,7 @@
 			 <div class="row">
 				<div class="col-xs-12">
 					<div class="form-group">
-						<input style="background-color:#FFFFE0" type="password"  name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="2" />
+						<input style="background-color:#FFFFE0" type="password"  name="password" class="form-control input-lg" placeholder="Password" tabindex="2" />
 					</div>
 				</div>
 			
